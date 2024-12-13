@@ -1,0 +1,53 @@
+/** MAIN SECTION */
+#main_section {
+  #main_header {
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
+    margin-bottom: 1rem;
+    #header_title {
+      font-size: var(--size-2xl);
+    }
+    #add_employee_btn {
+      background-color: lightgray;
+      padding: 0.5rem 1rem;
+      border-radius: 18px;
+      transition: all 0.1s linear;
+    }
+    #add_employee_btn:hover {
+      background-color: rgb(165, 162, 162);
+    }
+  }
+  #info_container {
+    #employee_list_container,
+    #employee_info_container {
+      display: inline;
+    }
+    #employee_list_container {
+      width: 25%;
+      #list {
+        padding: 0.25rem;
+        li {
+          display: flex;
+          justify-content: space-between;
+          background-color: lightgray;
+          margin-bottom: 0.25rem;
+          padding: 0.25rem;
+          border-radius: 8px;
+          font-size: var(--size-sm);
+        }
+      }
+    }
+    #employee_info_container {
+      width: 75%;
+      #employee_info {
+        gap: 0.5rem;
+        padding: 2rem;
+        #employee_image {
+          height: 8rem;
+          width: 8rem;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
