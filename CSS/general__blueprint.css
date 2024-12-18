@@ -28,12 +28,16 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Roboto";
+  position: relative;
+  height: 100svh;
+  /* overflow-y: hidden; */
 }
 button {
   padding: 0;
@@ -48,13 +52,26 @@ a {
 li {
   list-style: none;
 }
-main {
-  padding: 1rem 1rem;
+input {
+  outline: none;
 }
 /* PROJECT GENERAL STYLING */
+main {
+  padding: 0.25rem 1rem;
+}
 .title {
   text-align: center;
   border-bottom: 1px solid black;
   margin: 0 0.5rem;
   padding-bottom: 0.5rem;
+}
+.modal_input[type="number"] {
+  -moz-appearance: textfield;
+}
+.modal_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.delete_employee_btn {
+  cursor: pointer;
 }

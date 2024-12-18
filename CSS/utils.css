@@ -1,0 +1,22 @@
+.border {
+  border: 1px solid red;
+}
+.border_black {
+  border: 1px solid black;
+}
+.flex {
+  display: flex;
+}
+.flex_column {
+  flex-direction: column;
+}
+.flex_center {
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+.blur_filter {
+  filter: blur(5px);
+}

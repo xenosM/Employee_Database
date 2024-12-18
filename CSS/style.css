@@ -1,5 +1,8 @@
 /** MAIN SECTION */
 #main_section {
+  z-index: -1;
+  height: 100%;
+
   #main_header {
     justify-content: space-between;
     padding: 0rem 0.5rem;
@@ -25,28 +28,71 @@
     #employee_list_container {
       width: 25%;
       #list {
+        height: 40rem;
         padding: 0.25rem;
+        overflow-y: scroll;
         li {
+          user-select: none;
           display: flex;
           justify-content: space-between;
           background-color: lightgray;
-          margin-bottom: 0.25rem;
-          padding: 0.25rem;
+          margin-bottom: 0.5rem;
+          padding: 0.5rem;
           border-radius: 8px;
-          font-size: var(--size-sm);
+          font-size: var(--size-base);
         }
       }
     }
     #employee_info_container {
       width: 75%;
       #employee_info {
-        gap: 0.5rem;
-        padding: 2rem;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        font-size: var(--size-3xl);
         #employee_image {
-          height: 8rem;
-          width: 8rem;
+          height: 14rem;
+          width: 14rem;
           border-radius: 100%;
+          display: none;
         }
+        #employee_image[src] {
+          display: block;
+        }
+      }
+    }
+  }
+}
+#modal_section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  #modal_close_btn {
+    position: inherit;
+    top: 1rem;
+    right: 2rem;
+    font-size: var(--size-4xl);
+    transition: all 0.1s linear;
+  }
+  #modal_close_btn:hover {
+    transform: scale(1.25);
+  }
+  #modal {
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    #modal_title {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    #modal_form {
+      gap: 0.5rem;
+      #modal_submit_btn {
+        background-color: lightgray;
+        padding: 0.4rem 0;
+        border-radius: 5px;
+        font-size: var(--size-sm);
       }
     }
   }
