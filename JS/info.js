@@ -13,14 +13,14 @@ function showInfo(index) {
   let employee = employeeInfo[index];
   if (employee) {
     employeeInfoContainer.innerHTML = `
-    <img id="employee_image" src= ${employee.image || "images/image.png"} />
-    <h4 id="employee_name-age">${employee.firstName} ${
+      <img id="employee_image" src= ${employee.image || "images/image.png"} />
+      <h4 id="employee_name-age">${employee.firstName} ${
       employee.lastName
     }(${getAge(employee.DOB)})</h4>
-    <div id="employee_address">${employee.address};</div>
-    <div id="employee_email">${employee.email}</div>
-    <div id="employee_mobile">mobile: ${employee.contact}</div>
-    <div id="employee_dob">DOB: ${employee.DOB}</div>
+      <div id="employee_address">${employee.address};</div>
+      <div id="employee_email">${employee.email}</div>
+      <div id="employee_mobile">mobile: ${employee.contact}</div>
+      <div id="employee_dob">DOB: ${employee.DOB}</div>
   `;
   } else {
     employeeInfoContainer.innerHTML = "";
